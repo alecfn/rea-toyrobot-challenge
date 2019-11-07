@@ -1,4 +1,4 @@
-package boards;
+package toyrobot.boards;
 
 public class SimpleBoardTest {
 

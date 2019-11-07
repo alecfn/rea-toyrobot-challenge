@@ -1,4 +1,4 @@
-package robots;
+package toyrobot.robots;
 
 public class SimpleRobot extends Robot {
 

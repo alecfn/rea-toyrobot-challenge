@@ -1,4 +1,4 @@
-package robots;
+package toyrobot.robots;
 
 public abstract class Robot {
 

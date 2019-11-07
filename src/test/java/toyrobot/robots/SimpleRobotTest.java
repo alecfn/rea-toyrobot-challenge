@@ -1,4 +1,4 @@
-package robots;
+package toyrobot.robots;
 
 public class SimpleRobotTest {
 

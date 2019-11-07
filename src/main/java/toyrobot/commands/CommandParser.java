@@ -1,4 +1,4 @@
-package commands;
+package toyrobot.commands;
 
 /**
  * This will be the entry point of the program, processing
