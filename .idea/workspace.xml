@@ -2,27 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3eb9173-1a53-4ffc-b410-f673d93678f2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/toyrobot/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rea/toyrobot/boards/Position.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/rea/toyrobot/boards/PositionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boards/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toyrobot/boards/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boards/SimpleBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toyrobot/boards/SimpleBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CommandInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toyrobot/commands/CommandInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CommandParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toyrobot/commands/CommandParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toyrobot/commands/Commands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/MoveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toyrobot/commands/MoveCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/PlaceCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toyrobot/commands/PlaceCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ReportCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toyrobot/commands/ReportCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RotateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toyrobot/commands/RotateCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/robots/Robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toyrobot/robots/Robot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/robots/SimpleRobot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toyrobot/robots/SimpleRobot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/boards/SimpleBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/toyrobot/boards/SimpleBoardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/commands/CommandParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/toyrobot/commands/CommandParserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/commands/MoveCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/toyrobot/commands/MoveCommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/commands/PlaceCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/toyrobot/commands/PlaceCommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/commands/ReportCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/toyrobot/commands/ReportCommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/commands/RotateCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/toyrobot/commands/RotateCommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/robots/SimpleRobotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/toyrobot/robots/SimpleRobotTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rea/toyrobot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rea/toyrobot/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rea/toyrobot/boards/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rea/toyrobot/boards/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rea/toyrobot/boards/SimpleBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rea/toyrobot/boards/SimpleBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rea/toyrobot/commands/CommandInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rea/toyrobot/commands/CommandInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rea/toyrobot/commands/CommandParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rea/toyrobot/commands/CommandParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rea/toyrobot/commands/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rea/toyrobot/enums/Commands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rea/toyrobot/commands/MoveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rea/toyrobot/commands/MoveCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rea/toyrobot/commands/PlaceCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rea/toyrobot/commands/PlaceCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rea/toyrobot/commands/ReportCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rea/toyrobot/commands/ReportCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rea/toyrobot/commands/RotateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rea/toyrobot/commands/RotateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rea/toyrobot/robots/Robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rea/toyrobot/robots/Robot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rea/toyrobot/robots/SimpleRobot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rea/toyrobot/robots/SimpleRobot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/rea/toyrobot/boards/SimpleBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rea/toyrobot/boards/SimpleBoardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/rea/toyrobot/commands/CommandParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rea/toyrobot/commands/CommandParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/rea/toyrobot/commands/MoveCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rea/toyrobot/commands/MoveCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/rea/toyrobot/commands/PlaceCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rea/toyrobot/commands/PlaceCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/rea/toyrobot/commands/ReportCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rea/toyrobot/commands/ReportCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/rea/toyrobot/commands/RotateCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rea/toyrobot/commands/RotateCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/rea/toyrobot/robots/SimpleRobotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rea/toyrobot/robots/SimpleRobotTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +78,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.SimpleBoardTest">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -85,6 +87,56 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleBoardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="challenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rea.toyrobot.boards.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.rea.toyrobot.boards" />
+      <option name="MAIN_CLASS_NAME" value="com.rea.toyrobot.boards.SimpleBoardTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleBoardTest.testIsInvalidPosition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="challenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rea.toyrobot.boards.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.rea.toyrobot.boards" />
+      <option name="MAIN_CLASS_NAME" value="com.rea.toyrobot.boards.SimpleBoardTest" />
+      <option name="METHOD_NAME" value="testIsInvalidPosition" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleBoardTest.testIsValidPosition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="challenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rea.toyrobot.boards.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.rea.toyrobot.boards" />
+      <option name="MAIN_CLASS_NAME" value="com.rea.toyrobot.boards.SimpleBoardTest" />
+      <option name="METHOD_NAME" value="testIsValidPosition" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -114,6 +166,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SimpleBoardTest" />
+        <item itemvalue="JUnit.SimpleBoardTest.testIsValidPosition" />
+        <item itemvalue="JUnit.SimpleBoardTest.testIsInvalidPosition" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -125,7 +184,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1573114927486</updated>
-      <workItem from="1573114931262" duration="3484000" />
+      <workItem from="1573114931262" duration="9144000" />
     </task>
     <servers />
   </component>

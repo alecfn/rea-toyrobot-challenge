@@ -1,4 +1,4 @@
-package toyrobot.commands;
+package com.rea.toyrobot.commands;
 
 public class RotateCommandTest {
 

@@ -1,0 +1,12 @@
+com\rea\toyrobot\commands\RotateCommand.class
+com\rea\toyrobot\commands\ReportCommand.class
+com\rea\toyrobot\Main.class
+com\rea\toyrobot\robots\Robot.class
+com\rea\toyrobot\commands\Commands.class
+com\rea\toyrobot\commands\PlaceCommand.class
+com\rea\toyrobot\boards\Board.class
+com\rea\toyrobot\commands\MoveCommand.class
+com\rea\toyrobot\robots\SimpleRobot.class
+com\rea\toyrobot\boards\SimpleBoard.class
+com\rea\toyrobot\commands\CommandParser.class
+com\rea\toyrobot\commands\CommandInterface.class

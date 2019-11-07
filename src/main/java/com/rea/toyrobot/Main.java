@@ -1,4 +1,4 @@
-package toyrobot;
+package com.rea.toyrobot;
 
 public class Main {
 

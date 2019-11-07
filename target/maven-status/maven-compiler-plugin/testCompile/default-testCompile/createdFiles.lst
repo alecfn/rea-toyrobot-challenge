@@ -1,0 +1,7 @@
+com\rea\toyrobot\boards\SimpleBoardTest.class
+com\rea\toyrobot\commands\PlaceCommandTest.class
+com\rea\toyrobot\commands\RotateCommandTest.class
+com\rea\toyrobot\robots\SimpleRobotTest.class
+com\rea\toyrobot\commands\ReportCommandTest.class
+com\rea\toyrobot\commands\MoveCommandTest.class
+com\rea\toyrobot\commands\CommandParserTest.class
