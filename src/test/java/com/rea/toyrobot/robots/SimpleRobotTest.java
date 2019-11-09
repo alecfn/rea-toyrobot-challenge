@@ -21,11 +21,6 @@ public class SimpleRobotTest {
   }
 
   @Test
-  public void testRobotPlacement() {
-
-  }
-
-  @Test
   public void testRobotRotation() {
     testSimpleRobot.rotate(Direction.WEST);
     assertEquals(Direction.WEST, testSimpleRobot.getCurrentDirection());
