@@ -25,7 +25,6 @@ public class SimpleRobotTest {
     testSimpleRobot.transition();
     assertEquals(2, testSimpleRobot.getCurrentPosition().getXPosition());
     assertEquals(INITIAL_Y_POS, testSimpleRobot.getCurrentPosition().getYPosition());
-
   }
 
   @Test

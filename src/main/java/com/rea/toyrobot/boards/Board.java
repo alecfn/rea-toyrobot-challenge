@@ -11,8 +11,8 @@ public abstract class Board {
 
   /**
    * A board object should have at least a height and width boundary defined.
-   * @param width   The x boundary value of the board.
-   * @param height  The y boundary value of the board.
+   * @param width   The upper x boundary value of the board.
+   * @param height  The upper y boundary value of the board.
    */
   public Board(int width, int height) {
     this.width = width;
