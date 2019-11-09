@@ -26,8 +26,8 @@ public abstract class Board {
    * @return         True if a valid position on the board, false if not.
    */
   public boolean isValidPosition(Position position) {
-    return position.xPos >= xLowerBound && position.xPos <= this.getWidth()
-        && position.yPos >= yLowerBound && position.yPos <= this.getHeight();
+    return position.xPosition >= xLowerBound && position.xPosition <= this.getWidth()
+        && position.yPosition >= yLowerBound && position.yPosition <= this.getHeight();
   }
 
   public int getWidth() {

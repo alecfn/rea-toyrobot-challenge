@@ -5,17 +5,37 @@ package com.rea.toyrobot.model;
  */
 public class Position {
 
-  public int xPos;
-  public int yPos;
+  public int xPosition;
+  public int yPosition;
 
   /**
    * Constructor sets the X,Y position when initialised.
-   * @param xPos The X position on the Board.
-   * @param yPos The Y Position on the Board.
+   * @param xPosition The X position on the Board.
+   * @param yPosition The Y Position on the Board.
    */
-  public Position(int xPos, int yPos)
+  public Position(int xPosition, int yPosition)
   {
-    this.xPos = xPos;
-    this.yPos = yPos;
+    this.xPosition = xPosition;
+    this.yPosition = yPosition;
+  }
+
+  public int getXPosition()
+  {
+    return this.xPosition;
+  }
+
+  public void setXPosition(int newXPosition)
+  {
+    this.xPosition = newXPosition;
+  }
+
+  public int getYPosition()
+  {
+    return this.yPosition;
+  }
+
+  public void setYPosition(int newYPosition)
+  {
+    this.yPosition = newYPosition;
   }
 }
