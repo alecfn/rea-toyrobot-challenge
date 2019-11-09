@@ -2,6 +2,7 @@ package com.rea.toyrobot.robots;
 
 import com.rea.toyrobot.enums.Direction;
 import com.rea.toyrobot.model.Position;
+import com.rea.toyrobot.model.Transition;
 
 public abstract class Robot {
 
@@ -16,10 +17,9 @@ public abstract class Robot {
 
   /**
    * Handles movement of the Robot to a new position.
-   * @param position The next position being moved to.
    */
-  public void transition(Position position) {
-
+  public void transition() {
+    Transition.determineNextPosition(this.currentPosition, this.currentDirection);
   }
 
   /**

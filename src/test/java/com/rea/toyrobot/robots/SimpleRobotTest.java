@@ -17,6 +17,14 @@ public class SimpleRobotTest {
 
   @Test
   public void testRobotTransition() {
+    // By default the position is EAST, so x should increment by 1.
+    testSimpleRobot.transition();
+    assertEquals(1, testSimpleRobot.getCurrentPosition().getXPosition());
+    assertEquals(INITIAL_Y_POS, testSimpleRobot.getCurrentPosition().getYPosition());
+    // Direction didn't change, robot should now be 2 positions to the east.
+    testSimpleRobot.transition();
+    assertEquals(2, testSimpleRobot.getCurrentPosition().getXPosition());
+    assertEquals(INITIAL_Y_POS, testSimpleRobot.getCurrentPosition().getYPosition());
 
   }
 
