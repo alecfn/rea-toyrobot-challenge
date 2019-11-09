@@ -30,19 +30,4 @@ public class SimpleBoardTest {
     xPos = yPos = 10;
     assertFalse(testsimpleBoard.isValidPosition(new Position(xPos, yPos)));
   }
-
-  @Test
-  public void testXPosCannotExceedBoundary()
-  {
-    // Positions along the X axis should not exceed the defined limit of the board.
-  }
-
-  @Test
-  public void testYPosCannotExceedBoundary()
-  {
-    // As with X positions, test that Y positions cannot exceed the defined limit.
-
-  }
-
-
 }
