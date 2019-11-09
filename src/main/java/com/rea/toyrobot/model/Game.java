@@ -24,7 +24,11 @@ public class Game {
     this.playerRobot = new SimpleRobot(null, null);
   }
 
-  public void handleCommand() {
+  public SimpleBoard getPlayerBoard() {
+    return this.playerBoard;
+  }
 
+  public SimpleRobot getPlayerRobot() {
+    return this.playerRobot;
   }
 }

@@ -1,15 +1,22 @@
 package com.rea.toyrobot.model;
 
-import com.rea.toyrobot.enums.Command;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 import org.junit.jupiter.api.Test;
 
 public class GameTest {
 
   private Game testGame = new Game();
+  private static final int DEFAULT_UPPER_BOUND = 4;
 
   @Test
-  public void testHandleCommand() {
+  void testGameSetup() {
+    // Test that game and robot instances are set up correctly.
+    assertNotNull(testGame.getPlayerBoard());
+    assertEquals(DEFAULT_UPPER_BOUND, testGame.getPlayerBoard().getHeight());
+    assertEquals(DEFAULT_UPPER_BOUND, testGame.getPlayerBoard().getWidth());
 
+    assertNotNull(testGame.getPlayerRobot());
   }
-
 }
