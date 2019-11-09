@@ -11,8 +11,9 @@ import org.junit.jupiter.api.Test;
 
 public class PlaceCommandTest {
 
+  private static final int testXY = 0;
   private static Game testGame = new Game();
-  private Position testPosition = new Position(0, 0);
+  private Position testPosition = new Position(testXY, testXY);
   private PlaceCommand testPlaceCommand = new PlaceCommand(testGame, testPosition, Direction.WEST);
 
   @Test
@@ -22,8 +23,11 @@ public class PlaceCommandTest {
     assertNull(testGame.getPlayerRobot().getCurrentDirection());
 
     testPlaceCommand.execute();
-    assertNotNull(testGame.getPlayerRobot().getCurrentPosition());
-    assertNotNull(testGame.getPlayerRobot().getCurrentDirection());
+    Position robotPosition = testGame.getPlayerRobot().getCurrentPosition();
+    assertNotNull(robotPosition);
+    assertEquals(testXY, robotPosition.getXPosition());
+    assertEquals(testXY, robotPosition.getYPosition());
+    assertEquals(Direction.WEST, testGame.getPlayerRobot().getCurrentDirection());
   }
 
 }
