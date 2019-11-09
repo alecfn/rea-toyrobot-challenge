@@ -1,12 +1,12 @@
-package com.rea.toyrobot.boards;
+package com.rea.toyrobot.model;
 
 /**
  * Defines a simple Position object, with an X,Y value to be used on a board.
  */
 public class Position {
 
-  int xPos;
-  int yPos;
+  public int xPos;
+  public int yPos;
 
   /**
    * Constructor sets the X,Y position when initialised.

@@ -1,5 +1,7 @@
 package com.rea.toyrobot.boards;
 
+import com.rea.toyrobot.model.Position;
+
 public abstract class Board {
 
   private int width;
