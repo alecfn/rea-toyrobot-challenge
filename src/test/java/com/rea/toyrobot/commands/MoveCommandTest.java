@@ -15,6 +15,7 @@ public class MoveCommandTest {
 
   @BeforeAll
   static void setupGame() {
+    // We need to initialise a position for the robot before a move can be issued.
     testGame.getPlayerRobot().place(new Position(0, 0), Direction.EAST);
   }
 
