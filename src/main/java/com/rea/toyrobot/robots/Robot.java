@@ -26,8 +26,13 @@ public abstract class Robot {
    * Handles any subsequent PLACE commands to a new position other than the initial PLACE.
    * @param newPosition The new position on which to place the robot.
    */
-  public void place(Position newPosition) {
+  public void place(Position newPosition, Direction newDirection) {
+    this.currentPosition = newPosition;
 
+    // No need to reassign the direction if it is the same as the new one.
+    if (newDirection != this.currentDirection) {
+      this.currentDirection = newDirection;
+    }
   }
 
   /**

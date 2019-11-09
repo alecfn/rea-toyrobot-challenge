@@ -11,8 +11,9 @@ public class SimpleRobotTest {
   // Create a SimpleRobot placed in southwest corner, up one on the y axis.
   private int INITIAL_X_POS = 0;
   private int INITIAL_Y_POS = 1;
+  private Direction INITIAL_DIRECTION = Direction.EAST;
   private SimpleRobot testSimpleRobot = new SimpleRobot(new Position(INITIAL_X_POS, INITIAL_Y_POS),
-                                                        Direction.EAST);
+                                                        INITIAL_DIRECTION);
 
   @Test
   public void testRobotTransition() {
@@ -26,7 +27,6 @@ public class SimpleRobotTest {
 
   @Test
   public void testRobotRotation() {
-
     testSimpleRobot.rotate(Direction.WEST);
     assertEquals(Direction.WEST, testSimpleRobot.getCurrentDirection());
     testSimpleRobot.rotate(Direction.NORTH);
@@ -39,11 +39,18 @@ public class SimpleRobotTest {
 
   @Test
   public void testRobotReport() {
-    String expectedReportString = "0,1,EAST";
-    assertEquals(expectedReportString, testSimpleRobot.report());
+    // Test reporting after rotation.
+    String expectedEastReportString = "0,1,EAST";
+    assertEquals(expectedEastReportString, testSimpleRobot.report());
+
+    String expectedWestReportString = "0,1,WEST";
     testSimpleRobot.rotate(Direction.WEST);
-    expectedReportString = "0,1,WEST";
-    assertEquals(expectedReportString, testSimpleRobot.report());
+    assertEquals(expectedWestReportString, testSimpleRobot.report());
+
+    // Test reporting after new placement. Rotation should be the same.
+    String expectedNewPositionReportString = "1,3,WEST";
+    testSimpleRobot.place(new Position(1,3), Direction.WEST);
+    assertEquals(expectedNewPositionReportString, testSimpleRobot.report());
   }
 
   @Test
@@ -51,11 +58,13 @@ public class SimpleRobotTest {
     Position currentPosition = testSimpleRobot.getCurrentPosition();
     assertEquals(INITIAL_X_POS, currentPosition.getXPosition());
     assertEquals(INITIAL_Y_POS, currentPosition.getYPosition());
+    assertEquals(INITIAL_DIRECTION, testSimpleRobot.getCurrentDirection());
 
-    testSimpleRobot.place(new Position(1, 2));
+    testSimpleRobot.place(new Position(1, 2), Direction.WEST);
     Position newPosition = testSimpleRobot.getCurrentPosition();
     assertEquals(1, newPosition.getXPosition());
     assertEquals(2, newPosition.getYPosition());
+    assertEquals(Direction.WEST, testSimpleRobot.getCurrentDirection());
   }
 
 }
