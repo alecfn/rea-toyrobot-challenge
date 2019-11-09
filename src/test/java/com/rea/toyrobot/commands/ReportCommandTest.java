@@ -20,7 +20,7 @@ public class ReportCommandTest {
 
   @Test
   public void testReportCommand() {
-    // As the report command is issues, the value of the report should reflect the robot position.
+    // As the report command is issued, the value of the report should reflect the robot position.
     final String expectedReportCommand = "0,0,EAST";
     testReportCommand.execute();
     assertEquals(expectedReportCommand, testGame.getPlayerRobot().report());
