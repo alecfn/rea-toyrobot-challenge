@@ -11,6 +11,7 @@ public class ReportCommand implements GameOperation {
   }
 
   public void execute() {
-    game.getPlayerRobot().report();
+    // Just output the result of a report to System.out for now.
+    System.out.println(game.getPlayerRobot().report());
   }
 }
