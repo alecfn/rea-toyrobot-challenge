@@ -15,12 +15,9 @@ public class Game {
   private SimpleBoard playerBoard;
   private SimpleRobot playerRobot;
 
-  // Board positions begin at 0, so an upper of 4 is 5 positions.
-  private static final int DEFAULT_UPPER_BOUND = 4;
-
-  public Game() {
-    this.playerBoard = new SimpleBoard(DEFAULT_UPPER_BOUND, DEFAULT_UPPER_BOUND);
+  public Game(int xUpperBound, int yUpperBound) {
     // The player needs to define direction and position, so this is null at the beginning.
+    this.playerBoard = new SimpleBoard(xUpperBound, yUpperBound);
     this.playerRobot = new SimpleRobot(null, null);
   }
 

@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 public class GameTest {
 
-  private Game testGame = new Game();
+  private Game testGame = new Game(DEFAULT_UPPER_BOUND, DEFAULT_UPPER_BOUND);
   private static final int DEFAULT_UPPER_BOUND = 4;
 
   @Test

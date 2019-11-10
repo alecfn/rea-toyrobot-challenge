@@ -5,6 +5,7 @@ import static com.rea.toyrobot.commands.TestCommandConstants.TEST_MOVE_COMMAND;
 import static com.rea.toyrobot.commands.TestCommandConstants.TEST_PLACE_COMMAND;
 import static com.rea.toyrobot.commands.TestCommandConstants.TEST_REPORT_COMMAND;
 import static com.rea.toyrobot.commands.TestCommandConstants.TEST_RIGHT_COMMAND;
+import static com.rea.toyrobot.model.TestGameConstants.DEFAULT_UPPER_BOUND;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -21,7 +22,7 @@ public class CommandParserTest {
   // Some tests need to check stdout for correctness.
   private ByteArrayOutputStream stdoutOutput = new ByteArrayOutputStream();
 
-  private static Game testGame = new Game();
+  private static Game testGame = new Game(DEFAULT_UPPER_BOUND, DEFAULT_UPPER_BOUND);
   private static CommandParser testCommandParser = new CommandParser(testGame);
 
   @Test
@@ -44,7 +45,7 @@ public class CommandParserTest {
   @Test
   void testPlaceMustBeRunFirst() {
     // Separate instances to simulate a new instance of the simulator.
-    Game newTestGame = new Game();
+    Game newTestGame = new Game(DEFAULT_UPPER_BOUND, DEFAULT_UPPER_BOUND);
     CommandParser newTestParser = new CommandParser(newTestGame);
 
     // Position and direction should be null until a place command is issued.

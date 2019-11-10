@@ -1,5 +1,6 @@
 package com.rea.toyrobot.model;
 
+import static com.rea.toyrobot.model.TestGameConstants.DEFAULT_UPPER_BOUND;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.rea.toyrobot.enums.Direction;
@@ -9,7 +10,7 @@ public class TransitionTest {
 
   // Start in the lower left corner.
   private Position testPosition = new Position(0, 0);
-  private static final Game testGame = new Game();
+  private static final Game testGame = new Game(DEFAULT_UPPER_BOUND, DEFAULT_UPPER_BOUND);
 
   @Test
   public void testDetermineNextPosition() {

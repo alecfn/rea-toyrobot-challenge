@@ -1,5 +1,6 @@
 package com.rea.toyrobot.robots;
 
+import static com.rea.toyrobot.model.TestGameConstants.DEFAULT_UPPER_BOUND;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.rea.toyrobot.enums.Direction;
@@ -15,7 +16,7 @@ public class SimpleRobotTest {
   private Direction INITIAL_DIRECTION = Direction.EAST;
   private SimpleRobot testSimpleRobot = new SimpleRobot(new Position(INITIAL_X_POS, INITIAL_Y_POS),
                                                         INITIAL_DIRECTION);
-  private static final Game testGame = new Game();
+  private static final Game testGame = new Game(DEFAULT_UPPER_BOUND, DEFAULT_UPPER_BOUND);
 
   @Test
   public void testRobotTransition() {

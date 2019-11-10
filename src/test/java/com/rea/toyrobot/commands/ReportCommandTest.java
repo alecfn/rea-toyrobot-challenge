@@ -1,5 +1,6 @@
 package com.rea.toyrobot.commands;
 
+import static com.rea.toyrobot.model.TestGameConstants.DEFAULT_UPPER_BOUND;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.rea.toyrobot.enums.Direction;
@@ -10,7 +11,7 @@ import org.junit.jupiter.api.Test;
 
 public class ReportCommandTest {
 
-  private static Game testGame = new Game();
+  private static Game testGame = new Game(DEFAULT_UPPER_BOUND, DEFAULT_UPPER_BOUND);
   private ReportCommand testReportCommand = new ReportCommand(testGame);
 
   @BeforeAll

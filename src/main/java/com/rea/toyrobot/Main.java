@@ -7,7 +7,8 @@ import java.util.Scanner;
 public class Main {
 
   private static final String EXIT_COMMAND_STRING = "EXIT";
-  private static final Game game = new Game();
+  private static final int DEFAULT_UPPER_BOUND = 4;
+  private static final Game game = new Game(DEFAULT_UPPER_BOUND, DEFAULT_UPPER_BOUND);
 
   /**
    * Program entry point. Reads in all commands from stdin while the program is running.
