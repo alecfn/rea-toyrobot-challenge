@@ -3,6 +3,7 @@ package com.rea.toyrobot.robots;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.rea.toyrobot.enums.Direction;
+import com.rea.toyrobot.model.Game;
 import com.rea.toyrobot.model.Position;
 import org.junit.jupiter.api.Test;
 
@@ -14,15 +15,16 @@ public class SimpleRobotTest {
   private Direction INITIAL_DIRECTION = Direction.EAST;
   private SimpleRobot testSimpleRobot = new SimpleRobot(new Position(INITIAL_X_POS, INITIAL_Y_POS),
                                                         INITIAL_DIRECTION);
+  private static final Game testGame = new Game();
 
   @Test
   public void testRobotTransition() {
     // By default the position is EAST, so x should increment by 1.
-    testSimpleRobot.transition();
+    testSimpleRobot.transition(testGame);
     assertEquals(1, testSimpleRobot.getCurrentPosition().getXPosition());
     assertEquals(INITIAL_Y_POS, testSimpleRobot.getCurrentPosition().getYPosition());
     // Direction didn't change, robot should now be 2 positions to the east.
-    testSimpleRobot.transition();
+    testSimpleRobot.transition(testGame);
     assertEquals(2, testSimpleRobot.getCurrentPosition().getXPosition());
     assertEquals(INITIAL_Y_POS, testSimpleRobot.getCurrentPosition().getYPosition());
   }

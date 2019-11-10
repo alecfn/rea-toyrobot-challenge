@@ -12,6 +12,6 @@ public class MoveCommand implements GameOperation {
 
   @Override
   public void execute() {
-    game.getPlayerRobot().transition();
+    game.getPlayerRobot().transition(game);
   }
 }

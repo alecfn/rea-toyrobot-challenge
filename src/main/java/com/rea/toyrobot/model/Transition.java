@@ -14,25 +14,34 @@ public class Transition {
    * @param direction The current direction.
    * @return The determined position that will be transitioned to.
    */
-  public static Position determineNextPosition(Position position, Direction direction) {
+  public static Position determineNextPosition(Game game, Position position, Direction direction) {
 
+    Position newPosition = new Position(0, 0);
     int currentX = position.getXPosition();
     int currentY = position.getYPosition();
 
     switch (direction) {
       case EAST:
-        position.setXPosition(currentX + 1);
+        newPosition.setXPosition(currentX + 1);
+        newPosition.setYPosition(currentY);
         break;
       case WEST:
-        position.setXPosition(currentX - 1);
+        newPosition.setXPosition(currentX - 1);
+        newPosition.setYPosition(currentY);
         break;
       case NORTH:
-        position.setYPosition(currentY + 1);
+        newPosition.setYPosition(currentY + 1);
+        newPosition.setXPosition(currentX);
         break;
       case SOUTH:
-        position.setYPosition(currentY - 1);
+        newPosition.setYPosition(currentY - 1);
+        newPosition.setXPosition(currentX);
         break;
     }
+    if (game.getPlayerBoard().isValidPosition(newPosition)) {
+      return newPosition;
+    }
+    // The transition was not valid, return the old position.
     return position;
   }
 }

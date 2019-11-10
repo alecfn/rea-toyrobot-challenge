@@ -27,8 +27,6 @@ public class CommandParser {
   private static final String RIGHT_COMMAND_STRING = "RIGHT";
   private static final String REPORT_COMMAND_STRING = "REPORT";
 
-  private ArrayList<GameOperation> gameOperations = new ArrayList<>();
-
   private Game game;
 
   public CommandParser(Game game) {

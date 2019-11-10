@@ -9,23 +9,24 @@ public class TransitionTest {
 
   // Start in the lower left corner.
   private Position testPosition = new Position(0, 0);
+  private static final Game testGame = new Game();
 
   @Test
   public void testDetermineNextPosition() {
     // Test the logic of each possible transition.
-    Transition.determineNextPosition(testPosition, Direction.EAST);
+    testPosition = Transition.determineNextPosition(testGame, testPosition, Direction.EAST);
     assertEquals(1, testPosition.getXPosition());
     assertEquals(0, testPosition.getYPosition());
 
-    Transition.determineNextPosition(testPosition, Direction.WEST);
+    testPosition = Transition.determineNextPosition(testGame, testPosition, Direction.WEST);
     assertEquals(0, testPosition.getXPosition());
     assertEquals(0, testPosition.getYPosition());
 
-    Transition.determineNextPosition(testPosition, Direction.NORTH);
+    testPosition = Transition.determineNextPosition(testGame, testPosition, Direction.NORTH);
     assertEquals(0, testPosition.getXPosition());
     assertEquals(1, testPosition.getYPosition());
 
-    Transition.determineNextPosition(testPosition, Direction.SOUTH);
+    testPosition = Transition.determineNextPosition(testGame, testPosition, Direction.SOUTH);
     assertEquals(0, testPosition.getXPosition());
     assertEquals(0, testPosition.getYPosition());
   }
