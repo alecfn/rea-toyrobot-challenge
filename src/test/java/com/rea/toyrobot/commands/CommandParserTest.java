@@ -6,6 +6,7 @@ import static com.rea.toyrobot.commands.TestCommandConstants.TEST_PLACE_COMMAND;
 import static com.rea.toyrobot.commands.TestCommandConstants.TEST_REPORT_COMMAND;
 import static com.rea.toyrobot.commands.TestCommandConstants.TEST_RIGHT_COMMAND;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.rea.toyrobot.model.Game;
@@ -22,7 +23,6 @@ public class CommandParserTest {
 
   private static Game testGame = new Game();
   private static CommandParser testCommandParser = new CommandParser(testGame);
-
 
   @Test
   void testExecuteCommand() {
@@ -43,16 +43,20 @@ public class CommandParserTest {
 
   @Test
   void testPlaceMustBeRunFirst() {
-    System.setOut(new PrintStream(stdoutOutput));
+    // Separate instances to simulate a new instance of the simulator.
+    Game newTestGame = new Game();
+    CommandParser newTestParser = new CommandParser(newTestGame);
 
-    testCommandParser.executeCommand(TEST_MOVE_COMMAND);
-    assertTrue(stdoutOutput.toString().contains("A PLACE command must run before any other commands"
-                                                 + " are valid."));
+    // Position and direction should be null until a place command is issued.
+    newTestParser.executeCommand(TEST_MOVE_COMMAND);
+    newTestParser.executeCommand(TEST_RIGHT_COMMAND);
+    newTestParser.executeCommand(TEST_LEFT_COMMAND);
+    assertNull(newTestGame.getPlayerRobot().getCurrentDirection());
+    assertNull(newTestGame.getPlayerRobot().getCurrentPosition());
 
-    testCommandParser.executeCommand(TEST_PLACE_COMMAND);
-    testCommandParser.executeCommand(TEST_MOVE_COMMAND);
-    assertEquals("0,0,EAST", testGame.getPlayerRobot().report());
-
+    newTestParser.executeCommand(TEST_PLACE_COMMAND);
+    newTestParser.executeCommand(TEST_MOVE_COMMAND);
+    assertEquals("1,0,EAST", newTestGame.getPlayerRobot().report());
   }
 
   @Test

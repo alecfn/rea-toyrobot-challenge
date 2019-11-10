@@ -11,7 +11,6 @@ import com.rea.toyrobot.enums.Direction;
 import com.rea.toyrobot.model.Game;
 import com.rea.toyrobot.model.Position;
 import com.rea.toyrobot.model.Rotate;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -27,10 +26,12 @@ public class CommandParser {
   private static final String RIGHT_COMMAND_STRING = "RIGHT";
   private static final String REPORT_COMMAND_STRING = "REPORT";
 
-  private Game game;
+  private final Game game;
+  private boolean robotIsPlaced;
 
   public CommandParser(Game game) {
     this.game = game;
+    robotIsPlaced = false;
     // Represent input strings by mapping them to the relevant command enumeration.
     gameCommands.put(PLACE_COMMAND_STRING, PLACE);
     gameCommands.put(MOVE_COMMAND_STRING, MOVE);
@@ -51,7 +52,13 @@ public class CommandParser {
       // PLACE commands contain different variables so check that input matches the correct pattern.
       if (commandString.matches("PLACE [0-9],[0-9],[A-Z]{4,5}")) {
         command = gameCommands.get(PLACE_COMMAND_STRING);
+        robotIsPlaced = true;
       }
+      if (!robotIsPlaced) {
+        System.out.println("A valid PLACE command must run before any other commands.");
+        return;
+      }
+
       GameOperation operation = null;
       switch (command) {
         case PLACE:
