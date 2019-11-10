@@ -9,8 +9,8 @@ import org.junit.jupiter.api.Test;
 class SimpleBoardTest {
 
   // Define a basic 5x5 grid for testing a SimpleBoard.
-  private int width = 5;
-  private int height = 5;
+  private int width = 4;
+  private int height = 4;
   private SimpleBoard testSimpleBoard = new SimpleBoard(width, height);
 
   @Test
