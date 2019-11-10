@@ -60,6 +60,14 @@ public class CommandParserTest {
   }
 
   @Test
+  void testPlaceCannotPlaceRobotOutsideBounds() {
+    // PLACE commands should not be valid if they are outside the board bounds.
+    testCommandParser.executeCommand(TEST_PLACE_COMMAND);
+    testCommandParser.executeCommand("PLACE 10,10,NORTH");
+    assertEquals("0,0,EAST", testGame.getPlayerRobot().report());
+  }
+
+  @Test
   void testRobotCannotFall() {
     // Test instances where the robot may fall, along the bottom, top, left and right of the board.
 

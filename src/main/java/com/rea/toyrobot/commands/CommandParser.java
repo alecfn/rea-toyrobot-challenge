@@ -50,7 +50,7 @@ public class CommandParser {
     try {
       Command command = gameCommands.get(commandString);
       // PLACE commands contain different variables so check that input matches the correct pattern.
-      if (commandString.matches("PLACE [0-9],[0-9],[A-Z]{4,5}")) {
+      if (commandString.matches("PLACE [0-9]+,[0-9]+,[A-Z]{4,5}")) {
         command = gameCommands.get(PLACE_COMMAND_STRING);
         robotIsPlaced = true;
       }
@@ -66,6 +66,10 @@ public class CommandParser {
           String[] placeCommands = extractPlaceCommands(commandString);
           // As we know the PLACE command is in the correct format we can access by index.
           Position position = parsePlaceCommandPosition(placeCommands[1], placeCommands[2]);
+          if (position == null) {
+            System.out.println("Invalid Placement.");
+            return;
+          }
           Direction direction = parseDirectionCommand(placeCommands[3]);
           operation = new PlaceCommand(game, position, direction);
           break;
@@ -100,7 +104,12 @@ public class CommandParser {
   }
 
   private Position parsePlaceCommandPosition(String xPosition, String yPosition) {
-    return new Position(Integer.parseInt(xPosition), Integer.parseInt(yPosition));
+    Position placePosition =
+        new Position(Integer.parseInt(xPosition), Integer.parseInt(yPosition));
+    if (game.getPlayerBoard().isValidPosition(placePosition)) {
+      return placePosition;
+    }
+    return null;
   }
 
   private Direction parseDirectionCommand(String placeCommandDirection) {

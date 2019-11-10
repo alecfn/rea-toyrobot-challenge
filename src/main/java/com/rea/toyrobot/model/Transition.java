@@ -42,6 +42,7 @@ public class Transition {
       return newPosition;
     }
     // The transition was not valid, return the old position.
+    System.out.println("That move would cause the robot to fall!");
     return position;
   }
 }
