@@ -9,7 +9,7 @@ import com.rea.toyrobot.model.Position;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-public class RotateCommandTest {
+class RotateCommandTest {
 
   private static Game testGame = new Game(DEFAULT_UPPER_BOUND, DEFAULT_UPPER_BOUND);
   private RotateCommand testRotateCommand = new RotateCommand(testGame, Direction.NORTH);

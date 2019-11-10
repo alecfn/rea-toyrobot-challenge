@@ -24,7 +24,7 @@ public class Position {
     return this.xPosition;
   }
 
-  public void setXPosition(int newXPosition)
+  void setXPosition(int newXPosition)
   {
     this.xPosition = newXPosition;
   }
@@ -34,7 +34,7 @@ public class Position {
     return this.yPosition;
   }
 
-  public void setYPosition(int newYPosition)
+  void setYPosition(int newYPosition)
   {
     this.yPosition = newYPosition;
   }

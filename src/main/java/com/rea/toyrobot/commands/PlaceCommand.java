@@ -10,7 +10,7 @@ public class PlaceCommand implements GameOperation {
   private Position position;
   private Direction direction;
 
-  public PlaceCommand(Game game, Position position, Direction direction) {
+  PlaceCommand(Game game, Position position, Direction direction) {
     this.game = game;
     this.position = position;
     this.direction = direction;

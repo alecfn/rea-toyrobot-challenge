@@ -14,7 +14,7 @@ public abstract class Board {
    * @param width   The upper x boundary value of the board.
    * @param height  The upper y boundary value of the board.
    */
-  public Board(int width, int height) {
+  Board(int width, int height) {
     this.width = width;
     this.height = height;
   }

@@ -9,7 +9,7 @@ import com.rea.toyrobot.model.Position;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-public class ReportCommandTest {
+class ReportCommandTest {
 
   private static Game testGame = new Game(DEFAULT_UPPER_BOUND, DEFAULT_UPPER_BOUND);
   private ReportCommand testReportCommand = new ReportCommand(testGame);
@@ -20,7 +20,7 @@ public class ReportCommandTest {
   }
 
   @Test
-  public void testReportCommand() {
+  void testReportCommand() {
     // As the report command is issued, the value of the report should reflect the robot position.
     final String expectedReportCommand = "0,0,EAST";
     testReportCommand.execute();

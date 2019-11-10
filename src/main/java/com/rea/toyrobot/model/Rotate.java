@@ -8,6 +8,10 @@ import com.rea.toyrobot.enums.Direction;
  */
 public class Rotate {
 
+  private Rotate() {
+    // Hidden Constructor.
+  }
+
   public static Direction determineNewRotation(Direction direction, Command command) {
 
     if(command == Command.LEFT) {

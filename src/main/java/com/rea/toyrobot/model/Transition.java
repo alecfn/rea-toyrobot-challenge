@@ -7,6 +7,10 @@ import com.rea.toyrobot.enums.Direction;
  */
 public class Transition {
 
+  private Transition() {
+    // Hidden Constructor.
+  }
+
   /**
    * Change a position statically so we do not have to re-instantiate new position instances on
    * every MOVE command issued.
@@ -37,8 +41,6 @@ public class Transition {
         newPosition.setYPosition(currentY - 1);
         newPosition.setXPosition(currentX);
         break;
-      default:
-        System.out.println("nooo");
     }
     if (game.getPlayerBoard().isValidPosition(newPosition)) {
       return newPosition;

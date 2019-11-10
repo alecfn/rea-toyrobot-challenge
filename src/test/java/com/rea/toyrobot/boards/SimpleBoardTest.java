@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import com.rea.toyrobot.model.Position;
 import org.junit.jupiter.api.Test;
 
-public class SimpleBoardTest {
+class SimpleBoardTest {
 
   // Define a basic 5x5 grid for testing a SimpleBoard.
   private int width = 5;
@@ -14,7 +14,7 @@ public class SimpleBoardTest {
   private SimpleBoard testSimpleBoard = new SimpleBoard(width, height);
 
   @Test
-  public void testIsValidPosition()
+  void testIsValidPosition()
   {
     // Tests that a position is within the defined boundary.
     int xPos, yPos;
@@ -23,7 +23,7 @@ public class SimpleBoardTest {
   }
 
   @Test
-  public void testIsInvalidPosition()
+  void testIsInvalidPosition()
   {
     // Tests that a position outside the defined boundary is not valid.
     int xPos, yPos;

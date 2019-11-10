@@ -6,7 +6,7 @@ public class MoveCommand implements GameOperation {
 
   private Game game;
 
-  public MoveCommand(Game game) {
+  MoveCommand(Game game) {
     this.game = game;
   }
 

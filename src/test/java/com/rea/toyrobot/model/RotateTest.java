@@ -6,7 +6,7 @@ import com.rea.toyrobot.enums.Command;
 import com.rea.toyrobot.enums.Direction;
 import org.junit.jupiter.api.Test;
 
-public class RotateTest {
+class RotateTest {
 
   private Direction startDirection = Direction.EAST;
 

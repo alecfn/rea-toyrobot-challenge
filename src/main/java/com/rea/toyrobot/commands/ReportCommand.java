@@ -6,7 +6,7 @@ public class ReportCommand implements GameOperation {
 
   private Game game;
 
-  public ReportCommand(Game game) {
+  ReportCommand(Game game) {
     this.game = game;
   }
 

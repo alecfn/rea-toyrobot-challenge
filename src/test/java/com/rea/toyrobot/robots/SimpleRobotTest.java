@@ -8,7 +8,7 @@ import com.rea.toyrobot.model.Game;
 import com.rea.toyrobot.model.Position;
 import org.junit.jupiter.api.Test;
 
-public class SimpleRobotTest {
+class SimpleRobotTest {
 
   // Create a SimpleRobot placed in southwest corner, up one on the y axis.
   private int INITIAL_X_POS = 0;
@@ -19,7 +19,7 @@ public class SimpleRobotTest {
   private static final Game testGame = new Game(DEFAULT_UPPER_BOUND, DEFAULT_UPPER_BOUND);
 
   @Test
-  public void testRobotTransition() {
+  void testRobotTransition() {
     // By default the position is EAST, so x should increment by 1.
     testSimpleRobot.transition(testGame);
     assertEquals(1, testSimpleRobot.getCurrentPosition().getXPosition());
@@ -31,7 +31,7 @@ public class SimpleRobotTest {
   }
 
   @Test
-  public void testRobotRotation() {
+  void testRobotRotation() {
     testSimpleRobot.rotate(Direction.WEST);
     assertEquals(Direction.WEST, testSimpleRobot.getCurrentDirection());
     testSimpleRobot.rotate(Direction.NORTH);
@@ -43,7 +43,7 @@ public class SimpleRobotTest {
   }
 
   @Test
-  public void testRobotReport() {
+  void testRobotReport() {
     // Test reporting after rotation.
     String expectedEastReportString = "0,1,EAST";
     assertEquals(expectedEastReportString, testSimpleRobot.report());
@@ -59,7 +59,7 @@ public class SimpleRobotTest {
   }
 
   @Test
-  public void testRobotPlace() {
+  void testRobotPlace() {
     Position currentPosition = testSimpleRobot.getCurrentPosition();
     assertEquals(INITIAL_X_POS, currentPosition.getXPosition());
     assertEquals(INITIAL_Y_POS, currentPosition.getYPosition());
@@ -71,5 +71,4 @@ public class SimpleRobotTest {
     assertEquals(2, newPosition.getYPosition());
     assertEquals(Direction.WEST, testSimpleRobot.getCurrentDirection());
   }
-
 }

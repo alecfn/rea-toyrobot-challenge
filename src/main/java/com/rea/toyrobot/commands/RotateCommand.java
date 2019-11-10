@@ -12,7 +12,7 @@ public class RotateCommand implements GameOperation {
   private Game game;
   private Direction newDirection;
 
-  public RotateCommand(Game game, Direction newDirection) {
+  RotateCommand(Game game, Direction newDirection) {
     this.game = game;
     this.newDirection = newDirection;
   }

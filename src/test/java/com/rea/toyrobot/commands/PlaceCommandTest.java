@@ -10,7 +10,7 @@ import com.rea.toyrobot.model.Game;
 import com.rea.toyrobot.model.Position;
 import org.junit.jupiter.api.Test;
 
-public class PlaceCommandTest {
+class PlaceCommandTest {
 
   private static final int testXY = 0;
   private static Game testGame = new Game(DEFAULT_UPPER_BOUND, DEFAULT_UPPER_BOUND);
