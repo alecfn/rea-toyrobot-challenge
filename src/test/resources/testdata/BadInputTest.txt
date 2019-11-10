@@ -1,0 +1,6 @@
+PLACE 1,1,WEAST
+move
+rotate
+PLACE 3,3,SOUTH
+REPORT
+EXIT

@@ -113,6 +113,12 @@ public class CommandParser {
   }
 
   private Direction parseDirectionCommand(String placeCommandDirection) {
-    return Enum.valueOf(Direction.class, placeCommandDirection);
+    try {
+      return Enum.valueOf(Direction.class, placeCommandDirection);
+    } catch (IllegalArgumentException e) {
+      // In case a user enters an otherwise valid command, but a Direction that doesn't exist.
+      System.out.println(placeCommandDirection + " is not a valid direction.");
+      return null;
+    }
   }
 }

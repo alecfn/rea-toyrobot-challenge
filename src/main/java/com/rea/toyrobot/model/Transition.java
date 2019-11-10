@@ -37,6 +37,8 @@ public class Transition {
         newPosition.setYPosition(currentY - 1);
         newPosition.setXPosition(currentX);
         break;
+      default:
+        System.out.println("nooo");
     }
     if (game.getPlayerBoard().isValidPosition(newPosition)) {
       return newPosition;
