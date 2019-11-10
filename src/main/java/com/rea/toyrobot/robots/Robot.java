@@ -5,6 +5,9 @@ import com.rea.toyrobot.model.Game;
 import com.rea.toyrobot.model.Position;
 import com.rea.toyrobot.model.Transition;
 
+/**
+ * An Abstract representation of a Robot.
+ */
 public abstract class Robot {
 
   private Position currentPosition;

@@ -4,6 +4,9 @@ import com.rea.toyrobot.enums.Direction;
 import com.rea.toyrobot.model.Game;
 import com.rea.toyrobot.model.Position;
 
+/**
+ * Defines a PLACE command according to the Command Pattern.
+ */
 public class PlaceCommand implements GameOperation {
 
   private Game game;

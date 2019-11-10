@@ -2,6 +2,9 @@ package com.rea.toyrobot.commands;
 
 import com.rea.toyrobot.model.Game;
 
+/**
+ * Defines a REPORT command according to Command Pattern.
+ */
 public class ReportCommand implements GameOperation {
 
   private Game game;

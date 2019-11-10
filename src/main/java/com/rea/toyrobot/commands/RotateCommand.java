@@ -4,7 +4,8 @@ import com.rea.toyrobot.enums.Direction;
 import com.rea.toyrobot.model.Game;
 
 /**
- * Rotates the robot on the board. The new direction will be determined by the CommandParser,
+ * Defines a ROTATE command according to the Command Pattern.
+ * The new direction will be determined by the CommandParser,
  * based on whether the user input LEFT or RIGHT.
  */
 public class RotateCommand implements GameOperation {

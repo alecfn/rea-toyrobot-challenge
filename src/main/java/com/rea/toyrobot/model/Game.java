@@ -5,10 +5,9 @@ import com.rea.toyrobot.robots.SimpleRobot;
 
 /**
  * A representation of the game board.
- * Keeps track of the state of the game and uses input commands to determine how to change it.
+ * Keeps track of the state of the game, input commands determine how to change it.
  *
  * For now, a game only represents a SimpleRobot on a SimpleBoard.
- * Parameters for a board such as height/width are not provided so are defined here.
  */
 public class Game {
 

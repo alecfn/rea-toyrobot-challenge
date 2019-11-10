@@ -4,6 +4,9 @@ import com.rea.toyrobot.commands.CommandParser;
 import com.rea.toyrobot.model.Game;
 import java.util.Scanner;
 
+/**
+ * Entry point for the program, taking in user command strings.
+ */
 public class Main {
 
   private static final String EXIT_COMMAND_STRING = "EXIT";

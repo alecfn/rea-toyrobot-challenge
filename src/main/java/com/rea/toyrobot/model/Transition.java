@@ -14,9 +14,9 @@ public class Transition {
   /**
    * Change a position statically so we do not have to re-instantiate new position instances on
    * every MOVE command issued.
-   * @param position The current position on the board.
+   * @param position  The current position on the board.
    * @param direction The current direction.
-   * @return The determined position that will be transitioned to.
+   * @return          The determined position that will be transitioned to.
    */
   public static Position determineNextPosition(Game game, Position position, Direction direction) {
 
